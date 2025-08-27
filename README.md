@@ -1,76 +1,43 @@
-✍️ Handwritten Character Recognition (HCR)
-deep learning–based project to identify handwritten characters and digits using Convolutional Neural Networks (CNN). 
-This project demonstrates how image processing and neural networks
-can be applied to solve OCR (Optical Character Recognition) problems
+# ✍️ Handwritten Character Recognition (HCR)
 
+## 📌 Objective
+Identify handwritten characters or alphabets from image datasets.
 
-🚀 Overview
+## 🔬 Approach
+We use **image processing** and **deep learning techniques** to classify handwritten digits and characters.  
 
-Objective: Identify handwritten characters (digits and alphabets) from images.
+The project is built around **Convolutional Neural Networks (CNNs)**, which are well-suited for recognizing patterns in images.
 
-Approach:
-Image preprocessing (normalization, resizing, augmentation)
-Convolutional Neural Network (CNN) for classification
-Option to switch dataset between MNIST (digits) and EMNIST (characters)
-Extendable to sequence recognition (CRNN / CTC) for words or sentences
+## ✨ Features
+- ✅ Input: Handwritten characters/digits as images
+- ✅ Dataset options:
+  - MNIST (digits 0–9)
+  - EMNIST (characters A–Z)
+- ✅ Model: Convolutional Neural Network (CNN)
+- ✅ Extendable to:
+  - Full word recognition
+  - Sentence recognition using **CRNN (Convolutional Recurrent Neural Network)**
+- ✅ Includes preprocessing (grayscale, normalization, reshaping)
+- ✅ Training, evaluation, and accuracy comparison
 
-Use cases
-OCR for forms and exams
-Handwritten digit/character classification for education apps
-Preprocessing stage for handwriting-to-text conversion systems
+## 📂 Folder Structure
+Handwritten-Character-Recognition/
+│── data/ # MNIST / EMNIST datasets
+│── notebooks/ # Jupyter notebooks for training & testing
+│── models/ # Saved trained CNN models
+│── results/ # Plots, accuracy reports, confusion matrix
+│── README.md # Project documentation
+│── requirements.txt # Dependencies
 
+📊 Example Results
 
-
-✨ Features
-✅ Train and Evaluate Models
- Build and train a CNN classifier for handwritten digit recognition (MNIST).
- Extend to character recognition using EMNIST.
-✅ Computer Vision Preprocessing Pipeline
- Normalize and resize input images.
- Apply data augmentation (rotation, shift, noise) to improve generalization.
-✅ Model Management
- Save and load models in TensorFlow and PyTorch formats.
- Reuse trained models for inference or fine-tuning.
-✅ Experimentation & Visualization
-  Interactive Jupyter notebooks for EDA, training, and result visualization.
-✅ Inference on New Images
-   Example script (inference.py) to predict handwritten digits/characters from uploaded images.
-✅ Extend to Sequence Recognition
-Instructions to expand from character-level CNN to CRNN (Convolutional Recurrent Neural Network) for full word or sentence recognition.
-
-📁 Suggested Folder Structure
-Handwritten_Character_Recognition/
-│
-├── data/
-│   ├── mnist/                  # optional: downloaded MNIST files
-│   └── emnist/                 # optional: downloaded EMNIST files
-│
-├── notebooks/
-│   ├── 01-data-exploration.ipynb
-│   └── 02-training-demo.ipynb
-│
-├── src/
-│   ├── data_loader.py          # load & preprocess MNIST/EMNIST
-│   ├── augmentations.py        # augmentation utilities
-│   ├── model.py                # CNN model architecture
-│   ├── train.py                # training script
-│   ├── evaluate.py             # evaluation & metrics
-│   └── inference.py            # predict on new images
-│
-├── experiments/
-│   └── run_logs/               # saved logs & model checkpoints
-│
-├── requirements.txt
-├── README.md
-└── LICENSE
-
-🧠 Model (example)
-
-A simple CNN architecture used in src/model.py:
-Input: 28×28 grayscale image
-Conv2D(32) -> ReLU -> MaxPool
-Conv2D(64) -> ReLU -> MaxPool
-Flatten -> Dense(128) -> Dropout -> Dense(num_classes) -> Softmax
+MNIST Digit Recognition Accuracy: ~99%
+EMNIST Character Recognition Accuracy: ~90–95
+(Results may vary depending on hyperparameters and training time.)
+📌 Future Work
+Improve accuracy with deeper CNN architectures (ResNet, EfficientNet)
+Sequence modeling for full handwriting recognition (CRNN, LSTM)
+Deploy trained model as a web app using Flask/Streamlit
 
 🧑‍💻 Author
 Made with ❤️ by Shad777777
